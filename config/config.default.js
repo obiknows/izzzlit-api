@@ -16,7 +16,9 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1570474974561_877';
 
   // add your middleware config here
-  config.middleware = [];
+  config.middleware = [
+    'firebase'
+  ];
 
   // add your user config here
   const userConfig = {
