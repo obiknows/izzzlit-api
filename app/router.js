@@ -44,5 +44,12 @@ module.exports = app => {
   // router.get('/users/:user-id', controller.users.show);
   // router.post('/users', controller.users.index.create);
   // router.put('/users/:user-id', controller.users.update);
-  // router.del('/users/:user-id', controller.events.destroy);
+  // router.del('/users/:user-id', controller.users.destroy);
+
+  // RSVP
+  router.get('/rsvp', controller.rsvp.index)
+  router.get('/rsvp/create', controller.rsvp.create)
+  // router.get('/rsvp/:user-id', controller.rsvp.show);
+  // router.put('/rsvp/:rsvp-id', controller.rsvp.update);
+  // router.del('/rsvp/:rsvp-id', controller.rsvp.destroy);
 };

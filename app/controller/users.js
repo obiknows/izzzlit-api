@@ -4,19 +4,16 @@ const Controller = require('egg').Controller;
 
 
 class UserController extends Controller {
-  // async index() {
-  //   const { ctx } = this;
-  //   ctx.body = {'user': 'o13nna'};
-  // }
+  // GET /USERS
   async index() {
     const { ctx } = this;
     
     // Get DB ref
-    var user;
+    var user = [];
     const usersRef = ctx.db.collection('users');
 
     // Query based on user email
-    const queryRef = usersRef.where('email', '==', 'obiknows88@gmail.com').limit(1).get()
+    const queryRef = await usersRef.where('email', '==', 'obiknows88@gmail.com').limit(1).get()
       .then(snapshot => {
         if (snapshot.empty) {
           console.log('No matching documents.');
@@ -24,7 +21,8 @@ class UserController extends Controller {
         }  
 
         snapshot.forEach(doc => {
-          // console.log(doc.id, '=>', doc.data());
+          console.log(doc.id, '=>', doc.data());
+          // user.push(doc.data())
           user = doc.data()
         });
 
@@ -34,9 +32,13 @@ class UserController extends Controller {
         console.log('Error getting documents', err);
       });
 
-    console.log(user);
+    // ctx.body = {'user': user[0]}
     ctx.body = {'user': user}
     
+  }
+
+  async show(){
+    const { ctx } = this;
   }
 }
 

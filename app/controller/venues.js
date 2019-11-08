@@ -12,15 +12,15 @@ class VenueController extends Controller {
   }
 
   // (GET /venues/:venue-id)
-  // async show() {
-  //   const { ctx } = this;
-  //   ctx.body = {'venue': 'Drais'};
-  // }
+  async show() {
+    const { ctx } = this;
+    ctx.body = {'venue': 'Drais'};
+  }
   // (POST /venues)
-  // async create() {
-  //   const { ctx } = this;
-  //   ctx.body = {'venue': 'Drais'};
-  // }
+  async create() {
+    const { ctx } = this;
+    ctx.body = {'venue': 'Drais'};
+  }
   // (PUT /venues/:venue-id)
   // async update() {
   //   const { ctx } = this;
