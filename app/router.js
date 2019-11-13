@@ -33,7 +33,7 @@ module.exports = app => {
   // router.del('/venues/:venue-id', controller.venues.destroy);
 
   // EVENTS
-  router.get('/events', controller.events.index)
+  // router.get('/events', controller.events.index)
   // router.get('/events/:event-id', controller.events.show);
   // router.post('/events', controller.events.index.create);
   // router.put('/events/:event-id', controller.events.update);
@@ -52,4 +52,8 @@ module.exports = app => {
   // router.get('/rsvp/:user-id', controller.rsvp.show);
   // router.put('/rsvp/:rsvp-id', controller.rsvp.update);
   // router.del('/rsvp/:rsvp-id', controller.rsvp.destroy);
+
+  // SCRAPE
+  // router.get('/scrape-disco', controller.scrape.disco)
+
 };
